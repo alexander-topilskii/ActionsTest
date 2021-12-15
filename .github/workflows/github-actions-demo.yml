@@ -16,5 +16,5 @@ jobs:
           ls ${{ github.workspace }}
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          figma/figma-export init --platform android
       - run: echo "🍏 This job's status is ${{ job.status }}."
