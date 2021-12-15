@@ -14,8 +14,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: List files in the repository
-        run: |
-          working-directory: ./figma
-          ./figma-export init --platform android
+      - name: Change wrapper permissions
+        run: chmod +x ./figma/figma-export
+      - name: Build with figma
+        run: ./figma-export init --platform android
       - run: echo "🍏 This job's status is ${{ job.status }}."
